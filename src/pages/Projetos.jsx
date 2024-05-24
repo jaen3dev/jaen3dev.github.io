@@ -6,31 +6,36 @@ export default function Projetos() {
 
     const [filtered, setFiltered] = React.useState([])
     const [filterValues, setFilterValues] = React.useState([true, true, true, true])
- 
+
     React.useEffect(() => {
         setFiltered(jsonData)
     }, [])
 
     function handleChange(event) {
-        if(event.target.dataset.position == 0 && filterValues[0] == false){
-            setFilterValues(prev=>{
+
+       
+
+        if (event.target.dataset.position == 0 && filterValues[0] == false) {
+            setFilterValues(prev => {
                 const newValue = [...prev]
-                newValue.fill(true, 0, newValue.length -1)
+                newValue.fill(true)
                 return newValue
             })
-            
         }
 
-        setFilterValues(prev => {
-            const newValue = [...prev]
-            newValue[event.target.dataset.position] = !newValue[event.target.dataset.position]
-            return newValue
-        })
+        if (event.target.dataset.position !== 0) {
+            setFilterValues(prev => {
+                const newValue = [...prev]
+                newValue[event.target.dataset.position] = !newValue[event.target.dataset.position]
+                return newValue
+            })
+        }
 
         checkIfAllChecked()
+        
     }
-
-    function checkIfAllChecked(){
+    
+    function checkIfAllChecked() {
         const filterValuesMinusFirst = [...filterValues]
         filterValuesMinusFirst.shift()
         return filterValuesMinusFirst.reduce((acc, curr) => acc && curr, true)
@@ -49,7 +54,7 @@ export default function Projetos() {
 
             <div className="filters">
                 <label className="form-control">
-                    <input type="checkbox" name="todos" data-position="0" onChange={handleChange} checked={checkIfAllChecked()}/>
+                    <input type="checkbox" name="todos" data-position="0" onChange={handleChange} checked={checkIfAllChecked()} />
                     TODOS
                 </label>
                 <label className="form-control">
