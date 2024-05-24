@@ -4,7 +4,6 @@ import menu from '../assets/images/svgs/menu.svg'
 
 export default function Navbar() {
     const location = useLocation()
-    console.log(location)
 
     return (
         <>
