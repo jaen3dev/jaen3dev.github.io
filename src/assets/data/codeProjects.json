@@ -7,7 +7,10 @@
             "SCSS"
         ],
         "shortDescription": "Website realizado para a ONG Instituto Glacia da Silva.",
-        "longDescription": "Esse projeto consiste em um website que apresenta o Instituto Glacia da Silva - Corrente do Bem, é a terceira versão do website, todas programadas por mim, busquei nessa versão deixar ele mais limpo e simples que as versões anteriores. O objetivo desse website é de maneira rápida fazer uma breve introdução da ONG, de suas atividades e de como poder entrar em contato com ela para ajudar.",
+        "longDescription": [
+            "Esse projeto consiste em um website que apresenta o Instituto Glacia da Silva - Corrente do Bem, é a terceira versão do website, todas programadas por mim, busquei nessa versão deixar ele mais limpo e simples que as versões anteriores.",
+            "O objetivo desse website é de maneira rápida fazer uma breve introdução da ONG, de suas atividades e de como poder entrar em contato com ela para ajudar."
+        ],
         "linkImages": [
             "/igds-website.png"
         ],
@@ -20,12 +23,15 @@
         "cliente": "Instituto Glacia da Silva",
         "tecnologies": [
             "REACT",
-            "REACT-ROUTER-DOM",
+            "REACT-ROUTER",
             "SCSS",
             "TAURI"
         ],
         "shortDescription": "Aplicativo de cadastro de empréstimos do Instituto Glacia da Silva.",
-        "longDescription": "Esse projeto consiste em um aplicativo desktop que realiza o cadastro, listagem e filtro de empréstimos de aparelhos hospitalares. Existe uma necessidade de ter um controle dos aparelhos que são emprestados pelo Instituto Glacia da Silva - Corrente do Bem, as informações sobre os empréstimos estavam dispersas e confusas, causando em perda de dados.",
+        "longDescription": [
+            "Esse projeto consiste em um aplicativo desktop que realiza o cadastro, listagem e filtro de empréstimos de aparelhos hospitalares.",
+            "Existia uma necessidade de ter um controle dos aparelhos que são emprestados pelo Instituto Glacia da Silva - Corrente do Bem, as informações sobre os empréstimos estavam dispersas e confusas, causando perda de dados."
+        ],
         "linkImages": [
             "/igds-app.png"
         ],
@@ -34,17 +40,17 @@
     },
     {
         "id": 2,
-        "name": "Meu portfolio de projetos concluídos.",
+        "name": "Portfolio de projetos",
         "cliente": "Jaen3Dev",
         "tecnologies": [
             "REACT",
-            "REACT-ROUTER-DOM",
+            "REACT-ROUTER",
             "SCSS",
             "FRAMER-MOTION",
             "3D"
         ],
-        "shortDescription": "Meu portfolio com informações sobre meus projetos e maneira de entrar em contato.",
-        "longDescription": "Esse projeto consiste em apresentar os projetos que eu realizei assim como uma maneira de entrar em contato comigo, será atualizado sempre que um projeto novo for realizado.",
+        "shortDescription": "Meu portfolio pessoal com projetos e maneira de entrar em contato.",
+        "longDescription": ["Esse projeto consiste em apresentar os projetos que eu realizei assim como uma maneira de entrar em contato comigo, será atualizado sempre que um projeto novo for realizado."],
         "linkImages": [
             "/jaen3dev_website.png"
         ],
