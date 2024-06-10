@@ -65,15 +65,15 @@ export default function Habilidades() {
 
                 <motion.div
                     className="stack" variants={codeSpanVariant} initial='initial' animate='animate'>
-                    <motion.span variants={codeSpanVariant}><img src={html5} /> HTML5</motion.span>
-                    <motion.span variants={codeSpanVariant}><img src={css3} /> CSS3</motion.span>
-                    <motion.span variants={codeSpanVariant}><img src={javascript} /> JAVASCRIPT</motion.span>
-                    <motion.span variants={codeSpanVariant}><img src={sass} /> SASS</motion.span>
-                    <motion.span variants={codeSpanVariant}><img src={react} /> REACT</motion.span>
-                    <motion.span variants={codeSpanVariant}><img src={visualStudio} /> VSCODE</motion.span>
-                    <motion.span variants={codeSpanVariant}><img src={git} /> GIT</motion.span>
-                    <motion.span variants={codeSpanVariant}><img src={githubWt} /> GITHUB</motion.span>
-                    <motion.span variants={codeSpanVariant}><img src={figma} /> FIGMA</motion.span>
+                    <motion.span variants={codeSpanVariant}>{<span>Loading...</span> && <img src={html5} />} HTML5</motion.span>
+                    <motion.span variants={codeSpanVariant}>{<span>Loading...</span> && <img src={css3} />} CSS3</motion.span>
+                    <motion.span variants={codeSpanVariant}>{<span>Loading...</span> && <img src={javascript} />} JAVASCRIPT</motion.span>
+                    <motion.span variants={codeSpanVariant}>{<span>Loading...</span> && <img src={sass} />} SASS</motion.span>
+                    <motion.span variants={codeSpanVariant}>{<span>Loading...</span> && <img src={react} />} REACT</motion.span>
+                    <motion.span variants={codeSpanVariant}>{<span>Loading...</span> && <img src={visualStudio} />} VSCODE</motion.span>
+                    <motion.span variants={codeSpanVariant}>{<span>Loading...</span> && <img src={git} />} GIT</motion.span>
+                    <motion.span variants={codeSpanVariant}>{<span>Loading...</span> && <img src={githubWt} />} GITHUB</motion.span>
+                    <motion.span variants={codeSpanVariant}>{<span>Loading...</span> && <img src={figma} />} FIGMA</motion.span>
                 </motion.div>
 
                 <motion.h2
