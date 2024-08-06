@@ -1,8 +1,14 @@
 import React from "react"
 import { useParams } from 'react-router-dom'
-import { motion, useIsPresent } from "framer-motion"
+import { motion } from "framer-motion"
 import jsonData from '../assets/data/codeProjects.json';
-
+import { Link } from "react-router-dom";
+import returnBl from '../assets/images/svgs/return-bl.svg'
+import returnWt from '../assets/images/svgs/return-wt.svg'
+import githubBl from '../assets/images/svgs/github.svg'
+import githubWt from '../assets/images/svgs/github-wt.svg'
+import linktoBl from '../assets/images/svgs/linkto-bl.svg'
+import linktoWt from '../assets/images/svgs/linkto-wt.svg'
 
 export default function DetalhesProjeto() {
     const params = useParams()
@@ -28,8 +34,8 @@ export default function DetalhesProjeto() {
             />
 
             <motion.div className="red-skewed-bg-mobile" key='red-skewed-bg-mobile'
-                initial={{ opacity: 0, y: '-100%'}}
-                animate={{ opacity: 1, y: '0', height:'4rem' }}
+                initial={{ opacity: 0, y: '-100%' }}
+                animate={{ opacity: 1, y: '0', height: '4rem' }}
                 exit={{ opacity: 0, y: "-100%" }}
                 transition={{ duration: .75, ease: 'backInOut' }}
             />
@@ -39,8 +45,26 @@ export default function DetalhesProjeto() {
                 animate={{ opacity: 1, x: '0', transition: { duration: .75, delay: .5, ease: 'backInOut' } }}
                 exit={{ opacity: 0 }}>
                 <div className="content">
+                    <span className="mobile">
+                        <Link to='/projetos'><img src={returnBl} />Galeria de projetos</Link>
+                    </span>
+                    <span className="desktop">
+                        <Link to='/projetos'><img src={returnWt} />Galeria de projetos</Link>
+                    </span>
                     <h1>{projeto.name}</h1>
                     {projeto.linkImages && <img src={`/pngs/${projeto.linkImages[0]}`} />}
+                    <div className="mobile">
+                        <div className="links">
+                            <Link to={projeto.githubUrl} target="_blank"><img src={githubBl} /></Link>
+                            {projeto.websiteUrl != '' ? <Link to={projeto.websiteUrl} target="_blank"><img src={linktoBl} /></Link> : null}
+                        </div>
+                    </div>
+                    <div className="desktop">
+                        <div className="links">
+                            <Link to={projeto.githubUrl} target="_blank"><img src={githubWt} /></Link>
+                            {projeto.websiteUrl != '' ? <Link to={projeto.websiteUrl} target="_blank"><img src={linktoWt} /></Link> : null}
+                        </div>
+                    </div>
                 </div>
             </motion.div>
 

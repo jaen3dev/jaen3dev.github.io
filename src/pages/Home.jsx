@@ -2,10 +2,10 @@ import React, { Suspense } from "react"
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion"
 
-import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls, Environment, CameraControls } from "@react-three/drei";
-import Scene from "../../public/Scene.jsx";
+import Model from '../assets/Model.jsx'
 
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Environment, CameraControls } from "@react-three/drei";
 export default function Home() {
 
     return (
@@ -26,10 +26,9 @@ export default function Home() {
                                 <div key='threeD' className="threeD-element">
                                     <Canvas>
                                         <ambientLight />
-                                        <OrbitControls enableZoom={false}/>
-                                        <CameraControls distance={1.2}/>
+                                        <CameraControls distance={.6} polarAngle={1} azimuthAngle={0} boundaryEnclosesCamera={false}/>
                                         <Suspense fallback={null}>
-                                            <Scene />
+                                            <Model />
                                         </Suspense>
                                         <Environment preset="sunset" />
                                     </Canvas>
@@ -63,11 +62,9 @@ export default function Home() {
                                 exit={{ opacity: 0, x: '10rem' }}
                                 transition={{ duration: .75, ease: 'backInOut', delay: .2 }}>
                                 <Canvas>
-                                    <ambientLight />
-                                    <CameraControls distance={1.5}/>
-                                    <OrbitControls enableZoom={false}/>
+                                    <CameraControls distance={.65} polarAngle={.99} azimuthAngle={.7} boundaryEnclosesCamera={false}/>
                                     <Suspense fallback={null}>
-                                        <Scene />
+                                        <Model />
                                     </Suspense>
                                     <Environment preset="sunset" />
                                 </Canvas>

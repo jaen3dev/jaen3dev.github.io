@@ -186,10 +186,10 @@ body {
             transform-origin: top;
             height: 300px;
 
-            &:not(:last-child){
-                margin-bottom: .4rem;
+            &:not(:last-child) {
+                margin-bottom: 0.4rem;
             }
-            
+
             a {
                 text-decoration: none;
                 width: 100%;
@@ -201,7 +201,6 @@ body {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                
 
                 &:visited {
                     color: #c8102e;
@@ -242,6 +241,10 @@ body {
                 text-align: center;
                 height: 50%;
                 margin: 2rem 0rem;
+                padding: 1rem;
+
+                canvas{
+                }
             }
 
             a {
@@ -325,10 +328,15 @@ body {
                 }
             }
             .threeD {
-                border: 5px solid;
-                height: 400px;
-                width: 40%;
+                height: 100%;
+                width: 50%;
                 overflow: visible;
+
+                canvas{
+                    height: max-content;
+                    margin-top: 4rem;
+                    overflow: visible;
+                }
             }
         }
 
@@ -567,6 +575,55 @@ body {
         .content {
             margin: 5rem 2.4rem 0rem;
 
+            .mobile {
+                display: flex;
+
+                a {
+                    display: flex;
+                    text-decoration: none;
+                    color: #000000;
+                    align-items: center;
+                    margin-bottom: .5rem;
+                    margin-top: .5rem;
+                    font-size: 1rem;
+                    text-decoration: underline;
+
+                    img {
+                        border: none;
+                        overflow: visible;
+                        height: 2rem;
+                        width: 2rem;
+                        object-fit: unset;
+                        margin-top: -0.5rem;
+                        margin-right: 1rem;
+                    }
+
+                    &:visited {
+                        color: #000000;
+                    }
+                }
+
+                .links {
+                    display: flex;
+                    border: 5px #c8102e;
+                    margin: 1rem auto 0;
+
+                    a{
+                        img{
+                            width: 3rem;
+                            height: 3rem;
+                        }
+
+                        &:not(:last-of-type) {
+                            margin-right: 2.5rem;
+                        }
+                    }
+                }
+            }
+            .desktop {
+                display: none;
+            }
+
             h1 {
                 font-size: 1.5rem;
             }
@@ -591,7 +648,7 @@ body {
     @include desktop {
         flex-direction: row;
 
-        .red-skewed-bg-mobile{
+        .red-skewed-bg-mobile {
             display: none;
         }
 
@@ -612,7 +669,61 @@ body {
             flex-direction: column;
 
             .content {
-                margin: 7rem 2.4rem 0rem;
+                margin: 6rem 2.4rem 0rem;
+
+                .mobile{
+                    display: none;
+                }
+
+                .desktop {
+                    display: flex;
+
+                    a {
+                        display: flex;
+                        text-decoration: none;
+                        color: #ffffff;
+                        align-items: center;
+                        margin-bottom: 1rem;
+                        font-size: 0.9rem;
+                        text-decoration: underline;
+
+                        img {
+                            border: none;
+                            overflow: visible;
+                            height: 1.5rem;
+                            width: 1.5rem;
+                            object-fit: unset;
+                            margin-top: -0.5rem;
+                            margin-right: 1rem;
+                        }
+
+                        &:visited {
+                            color: #ffffff;
+                        }
+                    }
+
+                    .links {
+                        width: 100%;
+                        display: flex;
+                        margin-top: 1rem;
+                        padding: 0;
+                        justify-content: center;
+                        align-items: center;
+    
+                        a {
+                            margin: 0;
+
+                            img {
+                                height: 3rem;
+                                width: 3rem;
+                                margin: 0;
+                            }
+                            &:not(:last-of-type) {
+                                margin-right: 2rem;
+                            }
+                        }
+                    }
+                }
 
                 h1 {
                     margin-top: 0;
@@ -620,6 +731,7 @@ body {
                     color: #fff;
                     text-align: left;
                 }
+
                 img {
                     margin: 0 auto;
                     height: 300px;
@@ -634,7 +746,7 @@ body {
             width: 50%;
 
             .content {
-                margin: 7rem 2.4rem 0rem;
+                margin: 6rem 2.4rem 0rem;
 
                 h1 {
                     margin: 0;
