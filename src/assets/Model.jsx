@@ -11,7 +11,7 @@ export default function Model(props) {
   const { actions, names } = useAnimations(animations, group)
   console.log(names)
 
-  useEffect(()=>{
+  useEffect(() => {
 
     actions[names[0]].reset().fadeIn(2.5).play()
     actions[names[1]].reset().fadeIn(2.5).play()
@@ -27,11 +27,11 @@ export default function Model(props) {
     actions[names[11]].reset().fadeIn(2.5).play()
     actions[names[12]].reset().fadeIn(2.5).play()
 
-  },[])
+  }, [])
 
   return (
     <group ref={group} {...props} dispose={null}>
-      <group name="Scene">
+      <group name="Scene" position={[0,-0.15,0]}>
         <mesh
           name="Tela_3"
           castShadow

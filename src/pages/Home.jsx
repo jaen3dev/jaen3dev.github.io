@@ -1,12 +1,15 @@
-import React, { Suspense } from "react"
+import React, { Suspense, useRef } from "react"
 import { Link } from "react-router-dom";
+
 import { motion, AnimatePresence } from "framer-motion"
 
 import Model from '../assets/Model.jsx'
 
-import { Canvas } from "@react-three/fiber";
-import { OrbitControls, Environment, CameraControls } from "@react-three/drei";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { Environment, CameraControls } from "@react-three/drei";
+
 export default function Home() {
+
 
     return (
         <section id="home">
@@ -26,9 +29,9 @@ export default function Home() {
                                 <div key='threeD' className="threeD-element">
                                     <Canvas>
                                         <ambientLight />
-                                        <CameraControls distance={.6} polarAngle={1} azimuthAngle={0} boundaryEnclosesCamera={false}/>
+                                        <CameraControls distance={.41} polarAngle={1} azimuthAngle={0} boundaryEnclosesCamera={false} />
                                         <Suspense fallback={null}>
-                                            <Model />
+                                            <Model/>
                                         </Suspense>
                                         <Environment preset="sunset" />
                                     </Canvas>
@@ -62,7 +65,7 @@ export default function Home() {
                                 exit={{ opacity: 0, x: '10rem' }}
                                 transition={{ duration: .75, ease: 'backInOut', delay: .2 }}>
                                 <Canvas>
-                                    <CameraControls distance={.65} polarAngle={.99} azimuthAngle={.7} boundaryEnclosesCamera={false}/>
+                                    <CameraControls distance={.65} polarAngle={.99} azimuthAngle={.7} boundaryEnclosesCamera={false} />
                                     <Suspense fallback={null}>
                                         <Model />
                                     </Suspense>
