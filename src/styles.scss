@@ -242,7 +242,6 @@ body {
                 height: 50%;
                 margin: 2rem 0rem;
                 padding: 1rem;
-
             }
 
             a {
@@ -330,7 +329,7 @@ body {
                 width: 50%;
                 overflow: visible;
 
-                canvas{
+                canvas {
                     height: max-content;
                     margin-top: 1rem;
                     overflow: visible;
@@ -434,7 +433,7 @@ body {
     width: 100%;
 
     .filters {
-        margin-left: 2.4rem;
+        margin: 0rem 2.4rem;
         padding-top: 6rem;
         display: flex;
         flex-wrap: wrap;
@@ -489,12 +488,12 @@ body {
             color: #fff;
         }
     }
-
     .filtered-gallery {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 2rem;
         margin: 1rem 2.4rem;
+        //border: 5px solid red;
 
         .project {
             display: flex;
@@ -503,37 +502,46 @@ body {
             cursor: pointer;
             text-decoration: none;
             color: #000000;
+            //border: 5px solid green;
+            
+            div {
+                //border: 5px solid pink;
+                //background-color: rebeccapurple;
+                
+                h1 {
+                    font-weight: 500;
+                    font-size: 1rem;
+                }
 
-            h1 {
-                font-weight: 500;
-                font-size: 1rem;
-            }
+                img {
+                    border: 3px solid black;
+                    border-radius: 5px;
+                    width: 100%;
+                    height: 320px;
+                    object-fit: cover;
+                }
 
-            img {
-                border: 3px solid black;
-                border-radius: 5px;
-                width: 100%;
-                height: 320px;
-                object-fit: cover;
-            }
-
-            p {
-                font-size: 0.8rem;
-            }
-            .tags {
-                span {
-                    padding: 0.15rem;
-                    border: 1px solid black;
+                p {
                     font-size: 0.8rem;
+                }
 
-                    &:not(:last-of-type) {
-                        margin-right: 0.1rem;
+                .tags {
+                    display: flex;
+                    flex-wrap: wrap;
+                    span {
+                        margin: .05rem;
+                        padding: 0.15rem;
+                        border: 1px solid black;
+                        font-size: 0.8rem;
+                        &:not(:last-of-type) {
+                            margin-right: 0.1rem;
+                        }
                     }
                 }
-            }
 
-            &:visited {
-                color: #000000;
+                &:visited {
+                    color: #000000;
+                }
             }
         }
     }
@@ -544,6 +552,14 @@ body {
         background-color: #c8102e;
         width: 100vw;
         height: 4.5rem;
+    }
+
+    @include desktop{
+
+        .filtered-gallery{
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+
+        }
     }
 }
 
@@ -581,8 +597,8 @@ body {
                     text-decoration: none;
                     color: #000000;
                     align-items: center;
-                    margin-bottom: .5rem;
-                    margin-top: .5rem;
+                    margin-bottom: 0.5rem;
+                    margin-top: 0.5rem;
                     font-size: 1rem;
                     text-decoration: underline;
 
@@ -606,8 +622,8 @@ body {
                     border: 5px #c8102e;
                     margin: 1rem auto 0;
 
-                    a{
-                        img{
+                    a {
+                        img {
                             width: 3rem;
                             height: 3rem;
                         }
@@ -669,7 +685,7 @@ body {
             .content {
                 margin: 6rem 2.4rem 0rem;
 
-                .mobile{
+                .mobile {
                     display: none;
                 }
 
@@ -707,7 +723,7 @@ body {
                         padding: 0;
                         justify-content: center;
                         align-items: center;
-    
+
                         a {
                             margin: 0;
 
