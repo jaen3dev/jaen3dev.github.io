@@ -15,7 +15,7 @@
             "/igds-website.png"
         ],
         "githubUrl": "https://github.com/jaen3dev/novositeigds",
-        "websiteUrl": "https://www.institutoglaciadasilva.online/"
+        "websiteUrl": ""
     },
     {
         "id": 1,
@@ -55,6 +55,6 @@
             "/jaen3dev_website.png"
         ],
         "githubUrl": "https://github.com/jaen3dev/",
-        "websiteUrl": "https://placeholder.com/jaen3dev/"
+        "websiteUrl": "https://jaen3dev.github.io/"
     }
 ]
